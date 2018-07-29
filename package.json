@@ -23,7 +23,17 @@
     "nyc": "^12.0.2"
   },
   "keywords": [
-    "unquick"
+    "promise",
+    "delay",
+    "minimum",
+    "min",
+    "resolve",
+    "stall",
+    "defer",
+    "wait",
+    "timeout",
+    "settimeout",
+    "async"
   ],
   "license": "MIT"
 }
