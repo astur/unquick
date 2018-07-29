@@ -5,6 +5,8 @@ Ensures that the function will be executed for at least the specified time.
 [![Build Status][travis-image]][travis-url]
 [![NPM version][npm-image]][npm-url]
 
+## FAQ
+
 > __Q:__ Why not [p-min-delay](https://github.com/sindresorhus/p-min-delay#readme)?
 >
 > __A:__ Because `p-min-delay` works with promise, not function.
@@ -20,8 +22,13 @@ npm i unquick
 ```js
 const unquick = require('unquick');
 
-const runForAtLeast1000ms = unquick(someFunc, 1000);
+const runForAtLeast1000ms = unquick(fn, delay);
 ```
+
+* `fn` - any sync or async function.
+* `delay` - number of milliseconds.
+
+Returns async function, that takes same parameters as `fn` and do the same things, but do it at least `delay` milliseconds or longer.
 
 ## License
 
