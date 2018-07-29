@@ -1,9 +1,13 @@
 # unquick
 
-unquick description here
+Ensures that the function will be executed for at least the specified time.
 
 [![Build Status][travis-image]][travis-url]
 [![NPM version][npm-image]][npm-url]
+
+> __Q:__ Why not [p-min-delay](https://github.com/sindresorhus/p-min-delay#readme)?
+>
+> __A:__ Because `p-min-delay` works with promise, not function.
 
 ## Install
 
@@ -15,6 +19,8 @@ npm i unquick
 
 ```js
 const unquick = require('unquick');
+
+const runForAtLeast1000ms = unquick(someFunc, 1000);
 ```
 
 ## License
