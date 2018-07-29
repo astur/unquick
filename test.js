@@ -30,5 +30,18 @@ test('reject slow', async t => {
     t.true(Date.now() - start > 200);
 });
 
-test.todo('sync');
-test.todo('throw');
+test('sync', async t => {
+    const start = Date.now();
+    const result = await m(v => v, 100)('OK');
+    t.is(result, 'OK');
+    t.true(Date.now() - start > 100);
+});
+
+test('throw', async t => {
+    const start = Date.now();
+    const result = await m(v => {
+        throw v;
+    }, 100)('OK').catch(e => `[${e}]`);
+    t.is(result, '[OK]');
+    t.true(Date.now() - start > 100);
+});
