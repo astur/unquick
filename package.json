@@ -1,6 +1,6 @@
 {
   "name": "unquick",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Ensures that the function will be executed for at least the specified time",
   "main": "index.js",
   "author": "astur <astur@yandex.ru> (http://kozlov.am/)",
